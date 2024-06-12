@@ -18,6 +18,8 @@ test('checkBoxAutomation', async({page}) =>{
     for (const locator of checkBoxLocators)//select multple checkboxes
     {   if(page.locator(locator).isChecked()){
         await page.locator(locator).uncheck()
+
+       console.log("test");
     }
     }
     await page.waitForTimeout(5000);
